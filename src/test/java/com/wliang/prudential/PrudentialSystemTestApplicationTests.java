@@ -29,25 +29,13 @@ class PrudentialSystemTestApplicationTests {
         param.put("carMode","BMW 650");
         param.put("phone","15122223333");
         param.put("bookingNum",2);
+        param.put("bookStartTime","2022-06-17 00:00:00");
+        param.put("bookEndTime","2022-06-17 23:59:59");
         ObjectMapper objectMapper = new ObjectMapper();
         String s = objectMapper.writeValueAsString(param);
         String result = mockMvc.perform(post("/car/book")
         .contentType(MediaType.APPLICATION_JSON)
         .content(s)).andDo(print()).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
-        Assertions.assertNotNull(result);
-    }
-
-    @Test
-    void cancelBookTest() throws Exception {
-        Map<String,Object> param = new HashMap<>();
-        param.put("carMode","BMW 650");
-        param.put("phone","15122223333");
-        param.put("bookingNum",2);
-        ObjectMapper objectMapper = new ObjectMapper();
-        String s = objectMapper.writeValueAsString(param);
-        String result = mockMvc.perform(post("/car/cancelBook")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(s)).andDo(print()).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
         Assertions.assertNotNull(result);
     }
 }
