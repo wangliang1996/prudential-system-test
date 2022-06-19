@@ -16,7 +16,7 @@ public class ExceptionHandler {
             return WrapperResponse.fail( myException.getCode(),myException.getMessage());
         }else {
             System.out.println("system error "+e.getMessage());
-            return WrapperResponse.fail();
+            return WrapperResponse.fail(e.getMessage());
         }
     }
 

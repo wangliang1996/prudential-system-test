@@ -21,14 +21,12 @@ public class CarController {
     public WrapperResponse book(@RequestBody CarBookInfoDto carBookInfoDto){
         //check param
         Assert.notNull(carBookInfoDto,"book param can not null");
+        Assert.notNull(carBookInfoDto.getCarMode(),"book param can not null");
+        Assert.notNull(carBookInfoDto.getPhone(),"phone can not null");
+        Assert.notNull(carBookInfoDto.getBookStartTime(),"book start time can not null");
+        Assert.notNull(carBookInfoDto.getBookEndTime(),"book end time can not null");
+        Assert.notNull(carBookInfoDto.getBookingNum(),"book number can not null");
         carService.bookCar(carBookInfoDto);
-        return WrapperResponse.success();
-    }
-
-    @RequestMapping(value = "cancelBook",method = RequestMethod.POST)
-    public WrapperResponse cancelBook(@RequestBody CarBookInfoDto carBookInfoDto){
-        Assert.notNull(carBookInfoDto,"cancel book param can not null");
-        carService.cancelBookCar(carBookInfoDto);
         return WrapperResponse.success();
     }
 }

@@ -59,6 +59,10 @@ public class WrapperResponse<T> implements Serializable {
         return new WrapperResponse<T>(failCode,failMsg,param);
     }
 
+    public static <T> WrapperResponse<T> fail(String failMsg){
+        return new WrapperResponse<T>(failCode,failMsg,null);
+    }
+
     public static <T> WrapperResponse<T> fail(){
         return new WrapperResponse<T>(failCode,failMsg);
     }

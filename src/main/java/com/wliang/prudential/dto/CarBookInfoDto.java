@@ -1,7 +1,12 @@
 package com.wliang.prudential.dto;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 
+import java.io.Serializable;
+import java.util.Date;
+
+@Data
 public class CarBookInfoDto implements Serializable {
     private String carMode;
 
@@ -9,33 +14,9 @@ public class CarBookInfoDto implements Serializable {
 
     private String phone;
 
-    public CarBookInfoDto(String carMode, int bookingNum, String phone) {
-        this.carMode = carMode;
-        this.bookingNum = bookingNum;
-        this.phone = phone;
-    }
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    private Date bookStartTime;
 
-    public String getCarMode() {
-        return carMode;
-    }
-
-    public void setCarMode(String carMode) {
-        this.carMode = carMode;
-    }
-
-    public int getBookingNum() {
-        return bookingNum;
-    }
-
-    public void setBookingNum(int bookingNum) {
-        this.bookingNum = bookingNum;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    private Date bookEndTime;
 }
