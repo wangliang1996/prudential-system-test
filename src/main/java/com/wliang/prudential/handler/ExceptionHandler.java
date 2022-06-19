@@ -1,9 +1,8 @@
-package com.wliang.prudential.Handler;
+package com.wliang.prudential.handler;
 
-import com.wliang.prudential.Exception.BusinessException;
+import com.wliang.prudential.exception.BusinessException;
 import com.wliang.prudential.common.WrapperResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @ControllerAdvice

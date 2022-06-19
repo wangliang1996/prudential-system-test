@@ -1,8 +1,8 @@
-package com.wliang.prudential.Service.impl;
+package com.wliang.prudential.service.impl;
 
-import com.wliang.prudential.Dao.CarDao;
-import com.wliang.prudential.Dto.CarBookInfoDto;
-import com.wliang.prudential.Service.ICarService;
+import com.wliang.prudential.dao.CarDao;
+import com.wliang.prudential.dto.CarBookInfoDto;
+import com.wliang.prudential.service.ICarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

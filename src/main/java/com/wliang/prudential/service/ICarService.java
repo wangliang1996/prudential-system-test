@@ -1,6 +1,6 @@
-package com.wliang.prudential.Service;
+package com.wliang.prudential.service;
 
-import com.wliang.prudential.Dto.CarBookInfoDto;
+import com.wliang.prudential.dto.CarBookInfoDto;
 
 public interface ICarService {
     boolean bookCar(CarBookInfoDto carBookInfoDto);

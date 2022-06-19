@@ -1,4 +1,4 @@
-package com.wliang.prudential.Exception;
+package com.wliang.prudential.exception;
 
 public class BusinessException extends RuntimeException{
     private int code;

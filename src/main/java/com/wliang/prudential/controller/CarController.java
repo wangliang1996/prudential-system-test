@@ -1,7 +1,7 @@
-package com.wliang.prudential.Controller;
+package com.wliang.prudential.controller;
 
-import com.wliang.prudential.Dto.CarBookInfoDto;
-import com.wliang.prudential.Service.ICarService;
+import com.wliang.prudential.dto.CarBookInfoDto;
+import com.wliang.prudential.service.ICarService;
 import com.wliang.prudential.common.WrapperResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;

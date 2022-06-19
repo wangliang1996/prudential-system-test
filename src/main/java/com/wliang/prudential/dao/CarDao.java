@@ -1,11 +1,10 @@
-package com.wliang.prudential.Dao;
+package com.wliang.prudential.dao;
 
-import com.wliang.prudential.Exception.BusinessException;
+import com.wliang.prudential.exception.BusinessException;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Component
 public class CarDao {

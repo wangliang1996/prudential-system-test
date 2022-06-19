@@ -1,4 +1,4 @@
-package com.wliang.prudential.Dto;
+package com.wliang.prudential.dto;
 
 import java.io.Serializable;
 
